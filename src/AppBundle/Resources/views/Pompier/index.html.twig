@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Pompier list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('pompier_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.prenom }}</td>
+                <td>{{ entity.adresse }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('pompier_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('pompier_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('pompier_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+
+    <a href="{{ path('calendrier_new') }}">Calendrier</a>
+
+    {% endblock %}
