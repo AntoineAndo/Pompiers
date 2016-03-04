@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: antoine
- * Date: 30/09/15
- * Time: 10:31
- */
 
-namespace Dawan\EntityAccessBundle\Utils;
+namespace Caserne\EntityAccessBundle\Utils;
 
-use Dawan\EntityAccessBundle\Controller\DefaultController;
-use Dawan\EntityAccessBundle\Form\GenericType;
+use Caserne\EntityAccessBundle\Controller\DefaultController;
+use Caserne\EntityAccessBundle\Form\GenericType;
 
 class Form extends DefaultController
 {
@@ -27,7 +21,7 @@ class Form extends DefaultController
         $form = $this->createFormBuilder()
             ->setAction(
                 $this->generateUrl(
-                    'dawan_entityaccess_postrouteur_index',
+                    'caserne_entityaccess_postrouteur_index',
                     array('entity' => $this->entityConfig->getEntityShortName(), 'slug' => $slug)
                 )
             )
@@ -48,7 +42,7 @@ class Form extends DefaultController
 
         $array = $this->createForm(new GenericType(), $entity, array(
             'action' => $this->generateUrl(
-                'dawan_entityaccess_postrouteur_index',
+                'caserne_entityaccess_postrouteur_index',
                 array('entity' => $this->entityConfig->getEntityShortName())
             ),
             'required' => false,
@@ -64,14 +58,14 @@ class Form extends DefaultController
     /**
      * @return array
      */
-    public function createCreateForm($type = "Dawan\\EntityAccessBundle\\Form\\GenericType")
+    public function createCreateForm($type = "Caserne\\EntityAccessBundle\\Form\\GenericType")
     {
         $entityClass = $this->entityConfig->getEntityClass();
         $entity = new $entityClass();
 
         return array('form' => $this->createForm(new $type(), $entity, array(
             'action' => $this->generateUrl(
-                'dawan_entityaccess_postrouteur_action',
+                'caserne_entityaccess_postrouteur_action',
                 array('entity' => $this->entityConfig->getEntityShortName())
             ),
             'data_class' => $this->entityConfig->getEntityClass(),
@@ -82,14 +76,14 @@ class Form extends DefaultController
     }
 
 
-    public function createEditForm($slug, $repository, $type = "Dawan\\EntityAccessBundle\\Form\\GenericType")
+    public function createEditForm($slug, $repository, $type = "Caserne\\EntityAccessBundle\\Form\\GenericType")
     {
         $entity = $repository->findOneBySlug($slug);
         $entityName = $this->entityConfig->getEntityShortName();
         $fieldList = $this->fieldList;
 
         $editForm = $this->createForm(new $type(), $entity, array(
-            'action' => $this->generateUrl('dawan_entityaccess_postrouteur_index', array('entity' => $entityName,
+            'action' => $this->generateUrl('caserne_entityaccess_postrouteur_index', array('entity' => $entityName,
                 'slug' => $slug,)),
             'data_class' => $this->entityConfig->getEntityClass(),
             'method' => 'PUT',

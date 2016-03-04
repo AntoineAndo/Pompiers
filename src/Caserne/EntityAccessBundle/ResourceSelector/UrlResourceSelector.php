@@ -1,12 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: antoine
- * Date: 10/09/15
- * Time: 14:55.
- */
-namespace Dawan\EntityAccessBundle\ResourceSelector;
+namespace Caserne\EntityAccessBundle\ResourceSelector;
 
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 use Doctrine\ORM\EntityNotFoundException;
@@ -40,7 +34,7 @@ class UrlResourceSelector
                     }
                 } catch (\ReflectionException $e) {
                     return array(
-                        'controller' => 'Dawan\\EntityAccessBundle\\Controller\\DefaultController',
+                        'controller' => 'Caserne\\EntityAccessBundle\\Controller\\DefaultController',
                         'fqn' => $fqn);
                 }
             }

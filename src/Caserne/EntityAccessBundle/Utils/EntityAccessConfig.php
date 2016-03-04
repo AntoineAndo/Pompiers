@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: pierre
- * Date: 14/09/15
- * Time: 20:31
- */
 
-namespace Dawan\EntityAccessBundle\Utils;
+namespace Caserne\EntityAccessBundle\Utils;
 
 
-use Dawan\EntityAccessBundle\ResourceSelector\UrlResourceSelector;
+use Caserne\EntityAccessBundle\ResourceSelector\UrlResourceSelector;
 use Doctrine\Bundle\DoctrineBundle\Registry;
 
 class EntityAccessConfig

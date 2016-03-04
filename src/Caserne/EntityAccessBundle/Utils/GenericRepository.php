@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: antoine
- * Date: 28/09/15
- * Time: 10:11
- */
 
-namespace Dawan\EntityAccessBundle\Utils;
+namespace Caserne\EntityAccessBundle\Utils;
 
 
 class GenericRepository
