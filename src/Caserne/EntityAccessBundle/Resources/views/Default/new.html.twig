@@ -1,4 +1,4 @@
-{% extends 'DgServerBundle::layout.html.twig' %}
+{% extends 'PompierBundle::layout.html.twig' %}
 
 {% block main -%}
     <h1>{{ entityName }} creation</h1>
@@ -7,7 +7,7 @@
 
     <ul class="record_actions">
         <li>
-            <a href="{{ path('dawan_entityaccess_postrouteur_index',  {'entity' : entityName }) }}">
+            <a href="{{ path('caserne_entityaccess_postrouteur_index',  {'entity' : entityName }) }}">
                 Back to the list
             </a>
         </li>
