@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6958d6-775d-4d1c-8f40-968a45d40206" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/EntityAccessConfig.php" afterPath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/EntityAccessConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/Form.php" afterPath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/Form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/GenericRepository.php" afterPath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/GenericRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/ResourceSelector/UrlResourceSelector.php" afterPath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/ResourceSelector/UrlResourceSelector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Resources/views/layout.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/DependencyInjection/Configuration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/DawanUserBundle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/DependencyInjection/DawanUserExtension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Controller/DefaultController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Resources/views/Default/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Resources/config/services.xml" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\DawanEntityAccessBundle.php" afterPath="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/EntityAccessBundle.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_project_name.iws" />
@@ -21,7 +25,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\wamp\www\Pompiers" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -73,31 +77,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenericRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/GenericRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.060822897">
+            <state vertical-scroll-proportion="-0.6181818">
               <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Resources/views/Default/index.html.twig">
+      <file leaf-file-name="EntityAccessBundle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/EntityAccessBundle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0119047">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.9230769">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Resources/views/Default/new.html.twig">
+      <file leaf-file-name="DefaultControllerTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Tests/Controller/DefaultControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -219,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/EntityAccessConfig.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/Form.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/GenericRepository.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/EntityAccessBundle.php" />
       </list>
     </option>
   </component>
@@ -338,7 +343,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EntityAccessBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,11 +365,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EntityAccessBundle" />
+              <option name="myItemId" value="UserBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Utils" />
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,7 +486,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457133585661</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="truc">
+      <created>1457133809389</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1457133809390</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -521,20 +536,14 @@
     <MESSAGE value="C'est la fin" />
     <MESSAGE value="RIP" />
     <MESSAGE value="layouts" />
-    <option name="LAST_COMMIT_MESSAGE" value="layouts" />
+    <MESSAGE value="truc" />
+    <option name="LAST_COMMIT_MESSAGE" value="truc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Calendrier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Garde.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -812,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/DawanEntityAccessBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028911564">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Form/GenericType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.6">
@@ -924,8 +925,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/GenericRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060822897">
+        <state vertical-scroll-proportion="-0.6181818">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/EntityAccessBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Tests/Controller/DefaultControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
