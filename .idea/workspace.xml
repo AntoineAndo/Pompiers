@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6958d6-775d-4d1c-8f40-968a45d40206" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Controller\DefaultController.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\CaserneBundle.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/PompierBundle.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\DependencyInjection\CaserneExtension.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\DependencyInjection\Configuration.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\config\routing.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\config\services.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/services.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\doc\index.rst" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/doc/index.rst" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\translations\messages.fr.xlf" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/translations/messages.fr.xlf" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\views\Default\index.html.twig" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/views/Default/index.html.twig" />
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Tests\Controller\DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DataFixtures/ORM/UserFixtures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.phar" afterPath="$PROJECT_DIR$/composer.phar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_project_name.iws" />
@@ -37,8 +35,70 @@
       <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35034013">
-              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.75510204">
+              <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/services.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PompierExtension.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+              <folding>
+                <element signature="e#61#120#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserFixtures.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DataFixtures/ORM/UserFixtures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.9230769">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.0384616">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -48,10 +108,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="s server:start localhost:8080" />
-      <command text="s doctrine:schema:update --force" />
-      <command text="s server:run localhost:8080" />
-      <command text="s doctrine:schema:update --force" />
       <command text="s doctrine:schema:drop --force" />
       <command text="s doctrine:schema:create" />
       <command text="s doctrine:schema:update --force" />
@@ -73,6 +129,10 @@
       <command text="s doctrine:schema:update --force" />
       <command text="s server:run localhost:8080" />
       <command text="c update " />
+      <command text="c require stof/doctrine-extensions-bundle" />
+      <command text="composer require --dev doctrine/doctrine-fixtures-bundle" />
+      <command text="c self-update " />
+      <command text="c update " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -84,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -110,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Form/GenericType.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/DawanEntityAccessBundle.php" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Controller/PostRoutingController.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/DependencyInjection/CaserneEntityAccessExtension.php" />
         <option value="$PROJECT_DIR$/src/Caserne/EntityAccessBundle/DependencyInjection/Configuration.php" />
@@ -132,9 +190,11 @@
         <option value="$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Caserne/UserBundle/UserBundle.php" />
         <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/PompierBundle.php" />
-        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" />
-        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" />
         <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DataFixtures/ORM/UserFixtures.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
       </list>
     </option>
   </component>
@@ -298,7 +358,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="DependencyInjection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,11 +384,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="DataFixtures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="ORM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,6 +420,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\Pompiers\src\Caserne\PompierBundle" />
       <recent name="C:\wamp\www\Pompiers\src\Caserne" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -441,7 +502,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457133925398</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pompierBundle">
+      <created>1457134121303</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1457134121303</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -487,27 +554,14 @@
     <MESSAGE value="layouts" />
     <MESSAGE value="truc" />
     <MESSAGE value="users&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="users&#10;" />
+    <MESSAGE value="pompierBundle" />
+    <option name="LAST_COMMIT_MESSAGE" value="pompierBundle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Pompier/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -816,7 +870,7 @@
         <state vertical-scroll-proportion="-0.65384614">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#49#106#0#PHP" expanded="true" />
+            <element signature="e#49#106#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -826,7 +880,7 @@
         <state vertical-scroll-proportion="0.47959185">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="e#45#87#0#PHP" expanded="true" />
+            <element signature="e#45#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -863,22 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52040815">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05782313">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -887,28 +925,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/services.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05782313">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <element signature="e#7#60#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-1.0384616">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DataFixtures/ORM/UserFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20238096">
+        <state vertical-scroll-proportion="-4.576923">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="e#61#120#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35034013">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.75510204">
+          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
           <folding />
         </state>
       </provider>
