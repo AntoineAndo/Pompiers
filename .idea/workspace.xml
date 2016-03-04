@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6958d6-775d-4d1c-8f40-968a45d40206" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\DawanUserBundle.php" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/UserBundle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/UserBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php" />
+      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Controller\DefaultController.php" afterPath="" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\CaserneBundle.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/PompierBundle.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\DependencyInjection\CaserneExtension.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\DependencyInjection\Configuration.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\config\routing.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\config\services.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/services.php" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\doc\index.rst" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/doc/index.rst" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\translations\messages.fr.xlf" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/translations/messages.fr.xlf" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Resources\views\Default\index.html.twig" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/views/Default/index.html.twig" />
+      <change type="MOVED" beforePath="C:\wamp\www\Pompiers\src\Caserne\CaserneBundle\Tests\Controller\DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/Caserne/PompierBundle/Tests/Controller/DefaultControllerTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_project_name.iws" />
@@ -27,109 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EntityAccessConfig.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/EntityAccessConfig.php">
+      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3818183">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="19" />
-              <folding>
-                <element signature="e#53#121#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/Form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1904762">
-              <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-              <folding>
-                <element signature="e#52#112#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/Utils/GenericRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6181818">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityAccessBundle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/EntityAccessBundle/EntityAccessBundle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultControllerTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Tests/Controller/DefaultControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#49#106#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.038462">
-              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="e#45#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserBundle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/UserBundle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Resources/config/services.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Resources/views/Default/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35034013">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -175,9 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Date.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/DateType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
@@ -225,6 +131,10 @@
         <option value="$PROJECT_DIR$/src/Caserne/UserBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Caserne/UserBundle/UserBundle.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/PompierBundle.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php" />
+        <option value="$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php" />
       </list>
     </option>
   </component>
@@ -343,8 +253,26 @@
               <option name="myItemId" value="Caserne" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="UserBundle" />
+              <option name="myItemId" value="my_project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pompiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Caserne" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PompierBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,41 +294,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="UserBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_project_name" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pompiers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Caserne" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserBundle" />
+              <option name="myItemId" value="PompierBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -423,6 +317,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Caserne" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PompierBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -529,7 +435,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457133848184</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="users&#10;">
+      <created>1457133925398</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1457133925398</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -582,41 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08900524">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6938776">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Menu/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Pompier/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -768,22 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39285713">
           <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.269231">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Caserne/CaserneBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -962,8 +823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.038462">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47959185">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="e#45#87#0#PHP" expanded="true" />
           </folding>
@@ -972,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Caserne/UserBundle/UserBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.028911564">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
@@ -990,6 +851,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/PompierBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1734694">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/PompierExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52040815">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05782313">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05782313">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="e#7#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/config/routing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20238096">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35034013">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
         </state>
       </provider>
