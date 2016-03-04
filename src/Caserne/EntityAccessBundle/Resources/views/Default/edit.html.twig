@@ -1,0 +1,23 @@
+{% extends 'DgServerBundle::layout.html.twig' %}
+
+{% block main %}
+    <h1>{{ entityName}} edit</h1>
+
+    {{ form(edit_form) }}
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('dawan_entityaccess_postrouteur_index', {'entity' : entityName }) }}">
+                Back to the list
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('dawan_entityaccess_postrouteur_index',  {'entity' : entityName,
+                                                                       'slug' : slug }) }}">
+                Cancel
+            </a>
+        </li>
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+{% endblock %}
+
