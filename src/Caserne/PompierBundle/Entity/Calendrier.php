@@ -5,8 +5,6 @@ namespace Caserne\PompierBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
-const fieldNames = array('idGarde','idPompier', 'dispo', 'golor');
-
 
 /**
  * Calendrier
@@ -16,6 +14,8 @@ const fieldNames = array('idGarde','idPompier', 'dispo', 'golor');
  */
 class Calendrier
 {
+
+    //const fieldNames = array('idGarde','idPompier', 'dispo', 'color');
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id

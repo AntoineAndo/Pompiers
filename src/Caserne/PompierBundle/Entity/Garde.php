@@ -83,7 +83,7 @@ class Garde
      */
     public function getDate()
     {
-        return $this->date;
+        return date('Y-m-d H', strtotime($this->date));
     }
 
     /**
@@ -103,14 +103,7 @@ class Garde
     }
 
     public function __toString(){
-        $date = '';
-        try{
-            $dt = $this->getDate();
-            $date = $dt->format('d/m/Y');
-        }catch (Exception $e){
-        }
-
-        return $date;
+        return $this->date->format('d/m/Y') . " - " . $this->horaire;
     }
 
     /**

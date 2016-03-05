@@ -13,6 +13,9 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Pompier
 {
+
+    const fieldNames = array('nom','prenom','slug');
+
     /**
      * @var integer
      *

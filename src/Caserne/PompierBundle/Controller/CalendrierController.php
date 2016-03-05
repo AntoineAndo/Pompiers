@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Caserne\EntityAccessBundle\Utils\GenericRepository;
 use Caserne\EntityAccessBundle\Utils\Form;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 
 class CalendrierController extends DefaultController
@@ -20,36 +21,45 @@ class CalendrierController extends DefaultController
     private $entityAccessConfiguration;
 
     /**
-     * @Template("EntityAccessBundle:Default:index.html.twig")
+     * @Template("EntityAccessBundle:Calendrier:index.html.twig")
      */
     public function indexAction()
     {
-        dump("CALENDRIER CONTROLLER");
 
         $form = $this->getForms();
         $repo = new GenericRepository();
 
-        $repository = $this->getDoctrine()->getRepository($this->getEntityConfig()->getEntityClass());
-
         $entityConfig = $this->getEntityConfig();
+
+        $entities = $this->getDoctrine()->getRepository('PompierBundle:Pompier')->findAll();
+
+        dump($entities);
+
         $searchForm = $form->createSearchForm();
         $searchForm->add('submit', 'submit', array('label' => 'Search'));
 
-        $entityName = $entityConfig->getEntityShortName();
+        if(defined("Caserne\\PompierBundle\\Entity\\Pompier::fieldNames"))
+            $fieldsName = constant("Caserne\\PompierBundle\\Entity\\Pompier::fieldNames");
 
+        /*
+
+
+
+        $entityName = $entityConfig->getEntityShortName();
         //$fieldsName = $entityConfig->getFieldsName();
 
-        $fieldsName =  array('idGarde','idPompier', 'dispo', 'golor');
+        dump(constant($entity."::fieldNames"));
+
 
         $query = $repo->createQuery($fieldsName, $repository);
 
         $entities = $query->getResult();
 
-        dump($entities);
+*/
 
         return array(
             'entities' => $entities,
-            'entityName' => $entityName,
+            'entityName' => "Calendrier",
             'fieldnames' => $fieldsName,
             'search_form' => $searchForm->createView(),
         );
