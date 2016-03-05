@@ -2,7 +2,6 @@
 
 namespace Caserne\EntityAccessBundle\DependencyInjection;
 
-use CaserneBundle\DependencyInjection\Configuration;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -13,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class CaserneEntityAccessExtension extends Extension
+class EntityAccessExtension extends Extension
 {
     /**
      * {@inheritdoc}

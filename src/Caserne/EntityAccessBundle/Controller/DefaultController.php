@@ -23,6 +23,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        dump("ok");
+
         $form = $this->getForms();
         $repo = new GenericRepository();
 
