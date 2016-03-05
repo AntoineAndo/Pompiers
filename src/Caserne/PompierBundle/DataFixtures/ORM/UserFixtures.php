@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: antoine
- * Date: 25/11/15
- * Time: 10:50
- */
 
-namespace Caserne\DgServerBundle\DataFixtures\ORM;
+namespace Caserne\Pompier\DataFixtures\ORM;
 
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
