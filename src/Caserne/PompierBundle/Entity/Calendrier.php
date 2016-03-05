@@ -5,6 +5,9 @@ namespace Caserne\PompierBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
+const fieldNames = array('idGarde','idPompier', 'dispo', 'golor');
+
+
 /**
  * Calendrier
  *
@@ -38,6 +41,8 @@ class Calendrier
      * @ORM\Column(name="dispo", type="string", length=255)
      */
     private $dispo;
+
+    private $color;
 
     /**
      * @var string
@@ -143,6 +148,22 @@ class Calendrier
     public function setSlug($slug)
     {
         $this->slug = $slug;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * @param mixed $color
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
     }
 }
 
