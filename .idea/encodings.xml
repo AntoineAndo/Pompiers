@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Menu" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/Caserne/PompierBundle/Resources/views/layout.html.twig" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/Caserne/UserBundle" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/web/js/liveTableEdit.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/web/js/searchForm.js" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
