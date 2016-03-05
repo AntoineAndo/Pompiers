@@ -3,10 +3,11 @@
 namespace Caserne\EntityAccessBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class GenericType extends AbstractType
+class CalendrierType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder ↔
@@ -15,10 +16,18 @@ class GenericType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
-        foreach ($options['fields_name'] as $field) {
-            $builder->add($field['fieldName'], $this->getInputType($field['type']), array('block_name' => $field['fieldName'],
-                'empty_data' => null));
-        }
+        $builder
+            ->add('idGarde')
+            ->add('idPompier')
+            ->add('dispo', "choice", array(
+                'choices' => array(
+                    'Disponible' => "disponible",
+                    'Astreinte' => "astreinte",
+                    'Urgence' => "urgence",
+                    'Indisponible' => "indisponible"
+                )
+            )
+        );
     }
 
     public function getInputType($fieldType)
@@ -29,9 +38,6 @@ class GenericType extends AbstractType
                 break;
             case 'float':
                 $inputType = 'number';
-                break;
-            case 'date':
-                $inputType = 'date';
                 break;
             default:
                 $inputType = 'text';

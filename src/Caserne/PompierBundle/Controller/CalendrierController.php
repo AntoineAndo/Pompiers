@@ -2,6 +2,7 @@
 
 namespace Caserne\PompierBundle\Controller;
 
+use Caserne\EntityAccessBundle\Controller\DefaultController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -10,7 +11,7 @@ use Caserne\EntityAccessBundle\Utils\GenericRepository;
 use Caserne\EntityAccessBundle\Utils\Form;
 
 
-class CalendrierController extends Controller
+class CalendrierController extends DefaultController
 {
     private $repository;
     private $forms;
@@ -36,7 +37,9 @@ class CalendrierController extends Controller
 
         $entityName = $entityConfig->getEntityShortName();
 
-        $fieldsName = $entityConfig->getFieldsName();
+        //$fieldsName = $entityConfig->getFieldsName();
+
+        $fieldsName =  array('idGarde','idPompier', 'dispo', 'golor');
 
         $query = $repo->createQuery($fieldsName, $repository);
 
@@ -54,41 +57,12 @@ class CalendrierController extends Controller
     }
 
     /**
-     * @Template()
-     * @param $slug
-     * @return array
-     */
-    public function showAction($slug)
-    {
-        $form = $this->getForms();
-        $deleteForm = $form->createDeleteForm($slug);
-
-        $entity = $this->getRepository()->findOneBySlug($slug);
-        $entityShortName = $this->getEntityConfig()->getEntityShortName();
-
-        if (!$entity) {
-            return $this->forward("Caserne\\EntityAccessBundle\\Controller\\DefaultController::notFoundAction", array(
-                'entityShortName' => $entityShortName,
-            ));
-        }
-
-        $fieldsName = $this->getFieldsName();
-
-        return array(
-            'entity' => $entity,
-            'entityName' => $entityShortName,
-            'fieldsName' => $fieldsName,
-            'delete_form' => $deleteForm->createView(),
-        );
-    }
-
-    /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function createAction(Request $request)
     {
-        $form = $this->getForms()->createCreateForm();
+        $form = $this->getForms()->createCreateForm("Caserne\\EntityAccessBundle\\Form\\CalendrierType");
         $entity = $form['entity'];
         $form = $form['form'];
 
@@ -107,21 +81,14 @@ class CalendrierController extends Controller
     }
 
     /**
-     * @Template()
-     */
-    public function notFoundAction($entityShortName)
-    {
-        return array("entityShortName" => $entityShortName);
-    }
-
-    /**
-     * @Template()
+     * @Template("EntityAccessBundle:Default:new.html.twig")
      *
      * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function newAction()
     {
-        $form = $this->getForms()->createCreateForm();
+        dump("ok");
+        $form = $this->getForms()->createCreateForm("Caserne\\EntityAccessBundle\\Form\\CalendrierType");
         $form = $form['form'];
 
         $form->add('submit', 'submit', array('label' => 'Create'));

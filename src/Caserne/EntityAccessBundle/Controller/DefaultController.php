@@ -115,7 +115,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Template()
+     * @Template("EntityAccessBundle:Default:new.html.twig")
      *
      * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */

@@ -102,7 +102,7 @@ class Form extends DefaultController
     /**
      * @param $fieldList
      */
-    protected function setFormFieldList($fieldList)
+    public function setFormFieldList($fieldList)
     {
         $this->fieldList = $fieldList;
     }
@@ -110,7 +110,7 @@ class Form extends DefaultController
     /**
      * @param $container
      */
-    protected function setFormContainer($container)
+    public function setFormContainer($container)
     {
         $this->setContainer($container);
     }
@@ -118,7 +118,7 @@ class Form extends DefaultController
     /**
      * @param $entityConfig
      */
-    protected function setFormEntityConfig($entityConfig)
+    public function setFormEntityConfig($entityConfig)
     {
         $this->entityConfig = $entityConfig;
     }
