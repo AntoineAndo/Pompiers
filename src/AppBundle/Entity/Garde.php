@@ -98,6 +98,7 @@ class Garde
         try{
             $dt = $this->getDate();
             $date = $dt->format('d/m/Y');
+            $date.= " - ".$this->getHoraire();
         }catch (Exception $e){
         }
 

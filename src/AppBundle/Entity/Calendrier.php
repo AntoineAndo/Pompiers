@@ -27,7 +27,7 @@ class Calendrier
     private $idGarde;
 
     /**
-     *  @ORM\OneToOne(targetEntity="Pompier", inversedBy="calendrier")
+     *  @ORM\ManyToOne(targetEntity="Pompier", inversedBy="calendrier")
      *  @ORM\JoinColumn(name="idPompier", referencedColumnName="id")
      */
     private $idPompier;

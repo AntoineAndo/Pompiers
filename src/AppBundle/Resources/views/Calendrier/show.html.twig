@@ -3,18 +3,10 @@
 {% block body -%}
     <h1>Calendrier</h1>
 
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Dispo</th>
-                <td>{{ entity.dispo }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div id="calendar">
+
+    </div>
+
 
         <ul class="record_actions">
     <li>
@@ -29,4 +21,72 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+
+    <script>
+        var slug = window.location.href.split("/").pop();
+
+        $( document ).ready(function() {
+            function getData(callback) {
+                $.getJSON("ando-antoine/json", function (data) {
+                    callback(data);
+                });
+            }
+
+             getData(function(results){
+                 data = [
+                     {
+                         "title": "Garde",
+                         "start": "2016-03-01"
+                     },
+                     {
+                         "title": "Astreinte",
+                         "start": "2016-03-03"
+                     }
+                 ];
+                 results = JSON.parse(results);
+                 $('#calendar').fullCalendar({
+                     events: results,
+                     dayClick: function(date, jsEvent, view) {
+
+                         alert('Clicked on: ' + date.format());
+
+                         alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+
+                         alert('Current view: ' + view.name);
+
+                         // change the day's background color just for fun
+                         $(this).css('background-color', 'red');
+
+                     },
+                     eventClick: function(event, element) {
+
+                         event.title = "CLICKED!";
+                         console.log(element);
+                         $('#calendar').fullCalendar('updateEvent', event);
+
+                     }
+                 });
+            });
+
+
+
+
+        });
+
+
+        /*
+         $.ajax({
+         url: "ando-antoine/json",
+         method: "POST",
+         dataType: "json",
+         cache: false,
+         success: function(data){
+         console.log(data);
+         console.log("ok");
+         },
+         error:function(){
+         console.log("RAH");
+         }
+         });*/
+    </script>
 {% endblock %}

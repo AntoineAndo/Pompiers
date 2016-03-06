@@ -8591,3 +8591,10 @@ body {
   text-align: center;
   width: 1em;
 }
+
+
+#calendar{
+  width: 70%;
+  margin: auto;
+
+}

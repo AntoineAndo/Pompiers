@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -9,6 +10,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use AppBundle\Entity\Calendrier;
 use AppBundle\Form\CalendrierType;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * Calendrier controller.
@@ -29,7 +32,9 @@ class CalendrierController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AppBundle:Calendrier')->findAll();
+        $entities = $em->getRepository('AppBundle:Pompier')->findAll();
+
+        dump($entities);
 
         return array(
             'entities' => $entities,
@@ -99,30 +104,132 @@ class CalendrierController extends Controller
         );
     }
 
+
+
     /**
-     * Finds and displays a Calendrier entity.
-     *
-     * @Route("/{id}", name="calendrier_show")
      * @Method("GET")
+     * @Route("/{slug}/json", name="getJson")
+     */
+    public function getJSONAction(Request $request)
+    {
+        if ($request->isXMLHttpRequest()) {
+
+            $slug = explode("/",$_SERVER['REQUEST_URI']);
+            array_pop($slug);
+
+            $events = array();
+            $em = $this->getDoctrine()->getManager();
+
+            $entity = $em->getRepository("AppBundle:Pompier")->findOneBySlug(array_pop($slug));
+
+            if (!$entity) {
+                throw $this->createNotFoundException('Unable to find Calendrier entity.');
+            }
+
+            $connection = $em->getConnection();
+            $statement = $connection->prepare("SELECT * FROM calendrier JOIN garde ON idGarde = garde.id WHERE idPompier = :id");
+            $statement->bindValue('id', $entity->getId());
+            $statement->execute();
+            $results = $statement->fetchAll();
+
+
+
+            foreach($results as $garde){
+                $truc = explode("-", $garde["date"]);
+                $garde["jour"] = intval(array_pop($truc));
+                $garde["mois"] = intval(array_pop($truc));
+                $garde["annee"] = intval(array_pop($truc));
+
+                array_push($events, $garde);
+            }
+
+            $jours = array();
+            foreach($events as $jour){
+                array_push($jours, array("title" => $jour["dispo"]
+                                                ,"start" => $jour["date"]));
+            }
+
+            $jours = json_encode($jours, JSON_PRETTY_PRINT);
+
+
+
+
+            return new JsonResponse($jours);
+
+          //  return new JsonResponse(array('data' => 'this is a json response'));
+        }
+        return new Response('This is not ajax!', 400);
+    }
+
+
+
+
+    /**
+     *
+     * @Method("GET")
+     * @Route("/{slug}", name="calendrier_show")
      * @Template()
      */
-    public function showAction($id)
+    public function showAction($slug)
     {
+        $events = array();
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AppBundle:Calendrier')->find($id);
+        $entity = $em->getRepository("AppBundle:Pompier")->findOneBySlug($slug);
+
+     //   dump($entity);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Calendrier entity.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
+        $connection = $em->getConnection();
+        $statement = $connection->prepare("SELECT * FROM calendrier JOIN garde ON idGarde = garde.id WHERE idPompier = :id");
+        $statement->bindValue('id', $entity->getId());
+        $statement->execute();
+        $results = $statement->fetchAll();
+
+
+        dump($results);
+
+        $jour = 0;
+        $mois = 0;
+        $annee = 0;
+
+        foreach($results as $garde){
+
+            $truc = explode("-", $garde["date"]);
+            $garde["jour"] = intval(array_pop($truc));
+            $jour = $garde['jour'];
+            $garde["mois"] = intval(array_pop($truc));
+            $mois = $garde['mois'];
+            $garde["annee"] = intval(array_pop($truc));
+            $annee = $garde['annee'];
+            dump($garde);
+
+            array_push($events, $garde);
+        }
+
+        dump($events);
+
+        $jours = new \stdClass();
+        $jours->data = array();
+        foreach($truc as $jour){
+            array_push($jours->data, $jour["date"]);
+        }
+
+        $jours = json_encode($jours);
+       // dump($jours);
+
+        $deleteForm = $this->createDeleteForm($entity->getId());
 
         return array(
+            'jours'       => $jours,
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
+
 
     /**
      * Displays a form to edit an existing Calendrier entity.

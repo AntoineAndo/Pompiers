@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use FOS\UserBundle\Model\User as BaseUser;
 
 /**
@@ -13,13 +14,9 @@ use FOS\UserBundle\Model\User as BaseUser;
  */
 class Pompier
 {
-/*
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
-*/
+
+    const fieldNames = array('nom','prenom','slug');
+
     /**
      * @var integer
      *
@@ -56,6 +53,13 @@ class Pompier
      */
     protected $calendrier;
 
+    /**
+     * @var string
+     *
+     * @Gedmo\Slug(fields={"nom", "prenom"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
 
     /**
      * Get id
@@ -170,6 +174,22 @@ class Pompier
         }catch(Exception $e){
         }
         return $pompier;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
     }
 }
 
