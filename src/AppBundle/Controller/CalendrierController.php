@@ -136,7 +136,7 @@ class CalendrierController extends Controller
             }
 
             $connection = $em->getConnection();
-            $statement = $connection->prepare("SELECT * FROM calendrier JOIN garde ON idGarde = garde.id WHERE idPompier = :id");
+            $statement = $connection->prepare("SELECT calendrier.id AS idCalendrier, date, horaire, dispo, valide FROM calendrier JOIN garde ON idGarde = garde.id WHERE idPompier = :id");
             $statement->bindValue('id', $entity->getId());
             $statement->execute();
             $results = $statement->fetchAll();
@@ -156,6 +156,9 @@ class CalendrierController extends Controller
             foreach($events as $jour){
 
                 $jsonEvent = array();
+
+                $jsonEvent['id'] = $jour['idCalendrier'];
+                $jsonEvent['url'] = "http://www.google.fr";
 
                 if($jour["horaire"] == 'nuit') {
                     $start = "19:00";
