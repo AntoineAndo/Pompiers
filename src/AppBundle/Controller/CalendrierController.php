@@ -145,8 +145,15 @@ class CalendrierController extends Controller
 
             $jours = array();
             foreach($events as $jour){
-                array_push($jours, array("title" => $jour["dispo"]
-                                                ,"start" => $jour["date"]));
+                if($jour['valide'] == 0) {
+                    array_push($jours, array("title" => $jour["dispo"]
+                    , "start" => $jour["date"]
+                    , "className" => "valide"));
+                }
+                else{
+                    array_push($jours, array("title" => $jour["dispo"]
+                    , "start" => $jour["date"]));
+                }
             }
 
             $jours = json_encode($jours, JSON_PRETTY_PRINT);
@@ -170,14 +177,14 @@ class CalendrierController extends Controller
      * @Route("/{slug}", name="calendrier_show")
      * @Template()
      */
-    public function showAction($slug)
+    public function showAction($slug, Request $request)
     {
+        $slug = explode("/",$_SERVER['REQUEST_URI']);
+
         $events = array();
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository("AppBundle:Pompier")->findOneBySlug($slug);
-
-     //   dump($entity);
+        $entity = $em->getRepository("AppBundle:Pompier")->findOneBySlug(array_pop($slug));
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Calendrier entity.');
@@ -190,36 +197,35 @@ class CalendrierController extends Controller
         $results = $statement->fetchAll();
 
 
-        dump($results);
-
-        $jour = 0;
-        $mois = 0;
-        $annee = 0;
 
         foreach($results as $garde){
-
             $truc = explode("-", $garde["date"]);
             $garde["jour"] = intval(array_pop($truc));
-            $jour = $garde['jour'];
             $garde["mois"] = intval(array_pop($truc));
-            $mois = $garde['mois'];
             $garde["annee"] = intval(array_pop($truc));
-            $annee = $garde['annee'];
-            dump($garde);
 
             array_push($events, $garde);
         }
 
-        dump($events);
-
-        $jours = new \stdClass();
-        $jours->data = array();
-        foreach($truc as $jour){
-            array_push($jours->data, $jour["date"]);
+        $jours = array();
+        foreach($events as $jour){
+            if($jour['valide'] == 0) {
+                array_push($jours, array("title" => $jour["dispo"]
+                , "start" => $jour["date"]
+                , "className" => "valide"));
+            }
+            else{
+                array_push($jours, array("title" => $jour["dispo"]
+                , "start" => $jour["date"]));
+            }
         }
 
-        $jours = json_encode($jours);
-       // dump($jours);
+       $jours = json_encode($jours, JSON_PRETTY_PRINT);
+
+
+        if ($request->isXMLHttpRequest()) {
+            return new JsonResponse($jours);
+        }
 
         $deleteForm = $this->createDeleteForm($entity->getId());
 
@@ -227,6 +233,7 @@ class CalendrierController extends Controller
             'jours'       => $jours,
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
+            'json'        => $jours
         );
     }
 

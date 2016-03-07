@@ -40,6 +40,14 @@ class Calendrier
 
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="valide", type="boolean", nullable=true)
+     */
+    private $valide = false;
+
+
+    /**
      * Get id
      *
      * @return integer
@@ -119,6 +127,22 @@ class Calendrier
     public function getDispo()
     {
         return $this->dispo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValide()
+    {
+        return $this->valide;
+    }
+
+    /**
+     * @param mixed $valide
+     */
+    public function setValide($valide)
+    {
+        $this->valide = $valide;
     }
 }
 

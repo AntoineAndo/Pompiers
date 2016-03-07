@@ -8598,3 +8598,19 @@ body {
   margin: auto;
 
 }
+
+.valide::after{
+  content: "✔";
+
+  color: #00EC19;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 1px black;
+  background-color: white;
+
+}
