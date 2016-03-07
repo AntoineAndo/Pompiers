@@ -25,7 +25,8 @@ class CalendrierType extends AbstractType
                     'Urgence' => 'urgence',
                     'Indisponible' => 'indisponible'
                 ],
-                'choices_as_values' => false]);
+                'choices_as_values' => false])
+            ->add('valide');
         ;
     }
     

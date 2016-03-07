@@ -8,6 +8,7 @@
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
         <link href="{{ asset('css/global.css') }}" rel="stylesheet" media="screen">
         <link href="{{ asset('css/fullcalendar.min.css') }}" rel="stylesheet" media="screen">
+        <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet" media="screen">
         <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.print.css" rel="stylesheet" media="print">
     {% endblock %}
 
@@ -16,6 +17,8 @@
         <script src="{{ asset('js/moment.js') }}"></script>
         <script src="{{ asset('js/bootstrap.js') }}"></script>
         <script src="{{ asset('js/fullcalendar.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-ui.js') }}"></script>
+        <script src="{{ asset('js/liveTableEdit.js') }}"></script>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
@@ -46,6 +49,8 @@
             </div>
         </div>
     </nav>
+
+    {{ knp_menu_render('AppBundle:Builder:mainMenu', { 'style': 'pills'}) }}
 {% endblock %}
 {% block body %}
 

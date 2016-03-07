@@ -17,6 +17,7 @@ class Builder extends ContainerAware
     {
         $em = $this->container->get('doctrine.orm.entity_manager');
         $meta = $em->getMetadataFactory()->getAllMetadata();
+        dump($meta);
 
         $menu = $factory->createItem('root');
         $menu->addChild('Home', ['route' => 'homepage']);
@@ -29,14 +30,15 @@ class Builder extends ContainerAware
 
 
                 if (!$subMenu->parentClasses) {
-                    $menu->addChild(ucfirst($shortName), ['uri' => '/' . $shortName]);
+                    $menu->addChild(ucfirst($shortName), ['uri' => '/' . strtolower($shortName)]);
                 } else {
                     $parent = $this->getEntityShortName($subMenu->parentClasses[0]);
-                    $menu[$parent]->addChild(ucfirst($shortName), ['uri' => '/' . $shortName]);
+                    $menu[$parent]->addChild(ucfirst($shortName), ['uri' => '/' . strtolower($shortName)]);
                 }
             }
 
         }
+
         return $menu;
     }
 
@@ -45,7 +47,7 @@ class Builder extends ContainerAware
 
         $entitiesToExclude = array("User", "Contact");
 
-        if (array_shift($entityArray) == "Dawan") {
+        if (array_shift($entityArray) == "AppBundle") {
             $shortName = $this->getEntityShortName($entityArray);
             foreach ($entitiesToExclude as $entityToExclude) {
                 if ($shortName == $entityToExclude) {

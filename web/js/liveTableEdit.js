@@ -1,5 +1,5 @@
 $(function () {
-    $('table.records_list td.td').dblclick(function (e) {
+    $('table.records_list td').dblclick(function (e) {
         e.stopPropagation();
         var currentEle = $(this);
         var value = $(this).html();

@@ -28,18 +28,27 @@ class CalendrierController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $connection = $em->getConnection();
 
         $entities = $em->getRepository('AppBundle:Pompier')->findAll();
 
-        dump($entities);
+        $statement = $connection->prepare("SELECT calendrier.id, pompier.nom, pompier.prenom, garde.date FROM calendrier JOIN garde ON idGarde = garde.id JOIN pompier ON idPompier = pompier.id  WHERE valide = :valide");
+        $statement->bindValue('valide', 0);
+        $statement->execute();
+        $calendrier = $statement->fetchAll();
+
+        dump($calendrier);
+
 
         return array(
             'entities' => $entities,
+            'calendrier' => $calendrier
         );
     }
+
     /**
      * Creates a new Calendrier entity.
      *
@@ -61,10 +70,10 @@ class CalendrierController extends Controller
             return $this->redirect($this->generateUrl('calendrier_show', array('id' => $entity->getId())));
         }
 
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
+        /*  return array(
+              'entity' => $entity,
+              'form'  => $form->createView(),
+          );*/
     }
 
     /**
@@ -96,7 +105,7 @@ class CalendrierController extends Controller
     public function newAction()
     {
         $entity = new Calendrier();
-        $form   = $this->createCreateForm($entity);
+        $form  = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
@@ -145,15 +154,25 @@ class CalendrierController extends Controller
 
             $jours = array();
             foreach($events as $jour){
-                if($jour['valide'] == 0) {
-                    array_push($jours, array("title" => $jour["dispo"]
-                    , "start" => $jour["date"]
-                    , "className" => "valide"));
+
+                $jsonEvent = array();
+                $jsonEvent["title"] = $jour["dispo"];
+                $jsonEvent["start"] = $jour['date'];
+
+                if($jour['valide'] == 1) {
+                    $jsonEvent["className"] = $jour["valide"];
                 }
-                else{
-                    array_push($jours, array("title" => $jour["dispo"]
-                    , "start" => $jour["date"]));
-                }
+
+                if($jour['dispo'] == "Garde")
+                    $jsonEvent["backgroundColor"] = "green";
+                elseif ($jour['dispo'] == "Astreinte")
+                    $jsonEvent["backgroundColor"] = "orange";
+                elseif ($jour['dispo'] == "Urgence")
+                    $jsonEvent["backgroundColor"] = "red";
+                else
+                    $jsonEvent["backgroundColor"] = "#303030";
+
+                array_push($jours, $jsonEvent);
             }
 
             $jours = json_encode($jours, JSON_PRETTY_PRINT);
@@ -163,7 +182,7 @@ class CalendrierController extends Controller
 
             return new JsonResponse($jours);
 
-          //  return new JsonResponse(array('data' => 'this is a json response'));
+            //  return new JsonResponse(array('data' => 'this is a json response'));
         }
         return new Response('This is not ajax!', 400);
     }
@@ -174,66 +193,27 @@ class CalendrierController extends Controller
     /**
      *
      * @Method("GET")
-     * @Route("/{slug}", name="calendrier_show")
+     * @Route("/{id}", name="calendrier_show")
      * @Template()
      */
-    public function showAction($slug, Request $request)
+    public function showAction(Request $request)
     {
         $slug = explode("/",$_SERVER['REQUEST_URI']);
 
-        $events = array();
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository("AppBundle:Pompier")->findOneBySlug(array_pop($slug));
+        $entity = $em->getRepository("AppBundle:Pompier")->find(array_pop($slug));
+
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Calendrier entity.');
         }
 
-        $connection = $em->getConnection();
-        $statement = $connection->prepare("SELECT * FROM calendrier JOIN garde ON idGarde = garde.id WHERE idPompier = :id");
-        $statement->bindValue('id', $entity->getId());
-        $statement->execute();
-        $results = $statement->fetchAll();
-
-
-
-        foreach($results as $garde){
-            $truc = explode("-", $garde["date"]);
-            $garde["jour"] = intval(array_pop($truc));
-            $garde["mois"] = intval(array_pop($truc));
-            $garde["annee"] = intval(array_pop($truc));
-
-            array_push($events, $garde);
-        }
-
-        $jours = array();
-        foreach($events as $jour){
-            if($jour['valide'] == 0) {
-                array_push($jours, array("title" => $jour["dispo"]
-                , "start" => $jour["date"]
-                , "className" => "valide"));
-            }
-            else{
-                array_push($jours, array("title" => $jour["dispo"]
-                , "start" => $jour["date"]));
-            }
-        }
-
-       $jours = json_encode($jours, JSON_PRETTY_PRINT);
-
-
-        if ($request->isXMLHttpRequest()) {
-            return new JsonResponse($jours);
-        }
-
         $deleteForm = $this->createDeleteForm($entity->getId());
 
         return array(
-            'jours'       => $jours,
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
-            'json'        => $jours
         );
     }
 
@@ -266,12 +246,12 @@ class CalendrierController extends Controller
     }
 
     /**
-    * Creates a form to edit a Calendrier entity.
-    *
-    * @param Calendrier $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Calendrier entity.
+     *
+     * @param Calendrier $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Calendrier $entity)
     {
         $form = $this->createForm(new CalendrierType(), $entity, array(
@@ -290,11 +270,31 @@ class CalendrierController extends Controller
      * @Method("PUT")
      * @Template("AppBundle:Calendrier:edit.html.twig")
      */
-    public function updateAction(Request $request, $id)
+    public function updateAction($id, Request $request)
     {
+
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AppBundle:Calendrier')->find($id);
+
+        if ($request->isXMLHttpRequest()) {
+            $truc = $request->request->get("id");
+
+            $connection = $em->getConnection();
+            $statement = $connection->prepare("UPDATE calendrier SET valide = 1 WHERE idGarde = :id");
+            $statement->bindValue('id', $truc);
+            $statement->execute();
+
+
+            $result = array('data' => $truc);
+            return new JsonResponse($result);
+        }
+
+
+        $em = $this->getDoctrine()->getManager();
+
+        $slug = explode("/",$_SERVER['REQUEST_URI']);
+
+        $entity = $em->getRepository('AppBundle:Calendrier')->find(array_pop($slug));
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Calendrier entity.');
@@ -304,11 +304,9 @@ class CalendrierController extends Controller
         $editForm = $this->createEditForm($entity);
         $editForm->handleRequest($request);
 
-        if ($editForm->isValid()) {
-            $em->flush();
 
-            return $this->redirect($this->generateUrl('calendrier_edit', array('id' => $id)));
-        }
+        $em->flush();
+
 
         return array(
             'entity'      => $entity,
@@ -356,6 +354,6 @@ class CalendrierController extends Controller
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
-        ;
+            ;
     }
 }
