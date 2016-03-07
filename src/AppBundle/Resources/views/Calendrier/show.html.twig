@@ -4,7 +4,6 @@
     <h1>Calendrier</h1>
 
     <div id="calendar">
-
     </div>
 
 
@@ -46,51 +45,14 @@
                  ];
                  results = JSON.parse(results);
                  $('#calendar').fullCalendar({
-                     events: results,
-                     dayClick: function(date, jsEvent, view) {
-
-                     //    alert('Clicked on: ' + date.format());
-
-                     //    alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-
-                     //    alert('Current view: ' + view.name);
-
-                         // change the day's background color just for fun
-                         $(this).css('background-color', 'red');
-
-                     },
-                     eventClick: function(event, element) {
-                         console.log(element);
-                         if($.inArray("valide", element.target.parentElement.classList))
-                         {
-
-                             $(element.target).append("<div class='truc'><ul><li>GARDE</li><li>ASTREINTE</li></ul></div>");
-
-
-
-                         }
-
-                     }
+                     events: results
                  });
             });
 
+
+            $(".valide").append("OK");
+
         });
 
-
-
-        /*
-         $.ajax({
-         url: "ando-antoine/json",
-         method: "POST",
-         dataType: "json",
-         cache: false,
-         success: function(data){
-         console.log(data);
-         console.log("ok");
-         },
-         error:function(){
-         console.log("RAH");
-         }
-         });*/
     </script>
 {% endblock %}

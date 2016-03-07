@@ -156,12 +156,24 @@ class CalendrierController extends Controller
             foreach($events as $jour){
 
                 $jsonEvent = array();
-                $jsonEvent["title"] = $jour["dispo"];
-                $jsonEvent["start"] = $jour['date'];
 
-                if($jour['valide'] == 1) {
-                    $jsonEvent["className"] = "valide";
+                if($jour["horaire"] == 'nuit') {
+                    $start = "19:00";
+                    $end = "20:00";
+                    $creneau = "Nuit";
                 }
+                else {
+                    $start = "07:00";
+                    $end = "19:00";
+                    $creneau = "Jour";
+                }
+
+                $jsonEvent["title"] = $jour["dispo"] . " - " . $creneau;
+
+                $jsonEvent["start"] = $jour['date'] . " " . $start;
+                $jsonEvent["end"] = $jour['date'] . " " . $end;
+                if($jour['valide'] == 1)
+                    $jsonEvent["className"] = "valide";
 
                 if($jour['dispo'] == "Garde")
                     $jsonEvent["backgroundColor"] = "green";
