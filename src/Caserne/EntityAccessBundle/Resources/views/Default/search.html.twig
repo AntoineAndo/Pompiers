@@ -1,0 +1,50 @@
+{% extends 'PompierBundle::layout.html.twig' %}
+
+{% block main -%}
+    <h1>{{ entities|length }} result(s)</h1>
+
+
+    <table class="table table-striped records_list">
+        <thead>
+        <tr>
+            {% for fieldname in fieldnames %}
+                <th>{{ fieldname }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                {% for fieldname in fieldnames %}
+                    <td>{{ attribute(entity, fieldname) }}</td>
+                {% endfor %}
+                <td role="navigation">
+                    <ul class="quick-actions">
+                        <li>
+                            <a class="btn btn-default btn-lg" aria-label="show"
+                               href="{{ path('caserne_entityaccess_postrouteur_index', {'entity' : entityName,
+                                   'slug' : entity.slug }) }}">
+                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-default btn-lg" aria-label="edit"
+                               href="{{ path('caserne_entityaccess_postrouteur_index', { 'entity' : entityName,
+                                   'slug' : entity.slug ,
+                                   'action' : 'edit' }) }}">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <li>
+        <a href="{{ path('caserne_entityaccess_postrouteur_index', {'entity' : entityName }) }}">
+            Back to the list
+        </a>
+    </li>
+
+{% endblock %}
