@@ -20,6 +20,7 @@ class Builder extends ContainerAware
         dump($meta);
 
         $menu = $factory->createItem('root');
+        $menu->setChildrenAttributes(array('class' => 'nav navbar-nav'));
         $menu->addChild('Home', ['route' => 'homepage']);
 
         foreach ($meta as $subMenu) {

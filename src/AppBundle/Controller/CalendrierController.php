@@ -160,7 +160,7 @@ class CalendrierController extends Controller
                 $jsonEvent["start"] = $jour['date'];
 
                 if($jour['valide'] == 1) {
-                    $jsonEvent["className"] = $jour["valide"];
+                    $jsonEvent["className"] = "valide";
                 }
 
                 if($jour['dispo'] == "Garde")

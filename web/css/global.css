@@ -8601,7 +8601,6 @@ body {
 
 .valide::after{
   content: "✔";
-
   color: #00EC19;
   position: absolute;
   right: 0;

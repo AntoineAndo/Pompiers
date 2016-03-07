@@ -2,88 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6958d6-775d-4d1c-8f40-968a45d40206" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Menu/Builder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Calendrier.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/CalendrierControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DateControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Garde.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/GardeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/GardeType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Pompier.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PompierController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/PompierControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/PompierType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Post.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/PostControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/PostType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/cancerControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Garde/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Pompier/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Post/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Garde/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Pompier/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Post/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Garde/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Pompier/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Post/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Garde/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Pompier/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Post/show.html.twig" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Controller\DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Controller\PostRoutingController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\DependencyInjection\Configuration.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\DependencyInjection\EntityAccessExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\EntityAccessBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Form\CalendrierType.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Form\GenericType.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\ResourceSelector\UrlResourceSelector.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\config\services.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Calendrier\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Default\edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Default\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Default\new.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Default\notFound.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Default\search.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\Default\show.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Resources\views\layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Tests\Controller\DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Utils\EntityAccessConfig.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Utils\Form.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\EntityAccessBundle\Utils\GenericRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Controller\CalendrierController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\DataFixtures\ORM\UserFixtures.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\DependencyInjection\Configuration.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\DependencyInjection\PompierExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Entity\Calendrier.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Entity\Garde.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Entity\Pompier.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Entity\Post.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Entity\User.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Menu\Builder.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\PompierBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Resources\config\routing.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Resources\config\services.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Resources\doc\index.rst" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Resources\translations\messages.fr.xlf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Resources\views\Default\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Resources\views\layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\PompierBundle\Tests\Controller\DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\Controller\DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\DependencyInjection\Configuration.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\DependencyInjection\DawanUserExtension.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\Entity\User.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\Resources\config\services.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\Resources\views\Default\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\Tests\Controller\DefaultControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Pompiers\src\Caserne\UserBundle\UserBundle.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Menu/Builder.php" afterPath="$PROJECT_DIR$/src/AppBundle/Menu/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/global.css" afterPath="$PROJECT_DIR$/web/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/main.js" afterPath="$PROJECT_DIR$/web/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_project_name.iws" />
@@ -106,23 +30,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalendrierController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CalendrierController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="273" column="5" selection-start-line="272" selection-start-column="55" selection-end-line="273" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.51241136">
+              <caret line="157" column="37" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
               <folding>
                 <element signature="e#40#90#0#PHP" expanded="true" />
+                <marker date="1457366352784" expanded="true" signature="1067:1240" placeholder="SELECT calen..calendrier..." />
+                <marker date="1457366352784" expanded="true" signature="3903:3982" placeholder="SELECT * FRO..calendrier..." />
+                <marker date="1457366352784" expanded="true" signature="8043:8095" placeholder="UPDATE calen..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42606518">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0769231">
+              <caret line="29" column="114" selection-start-line="29" selection-start-column="114" selection-end-line="29" selection-end-column="114" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Builder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Menu/Builder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -141,8 +88,18 @@
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.846154">
+              <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -151,7 +108,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="9" column="60" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="60" />
               <folding />
             </state>
@@ -161,8 +118,8 @@
       <file leaf-file-name="CalendrierType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CalendrierType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            <state vertical-scroll-proportion="-9.269231">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -172,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/web/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8623" column="0" selection-start-line="8623" selection-start-column="0" selection-end-line="8623" selection-end-column="0" />
+              <caret line="8600" column="0" selection-start-line="8600" selection-start-column="0" selection-end-line="8614" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -220,7 +177,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="46e5ab15269a55a24ce22747adc9149e8b5adcc5" />
+        <entry key="$PROJECT_DIR$" value="truc" />
       </map>
     </option>
     <push-targets>
@@ -255,17 +212,17 @@
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Garde.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" />
         <option value="$PROJECT_DIR$/web/js/liveTableEdit.js" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Menu/Builder.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/CalendrierType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Calendrier.php" />
-        <option value="$PROJECT_DIR$/web/css/global.css" />
-        <option value="$PROJECT_DIR$/web/js/main.js" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Menu/Builder.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/global.css" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" />
       </list>
     </option>
   </component>
@@ -354,20 +311,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_project_name" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pompiers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -379,7 +322,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php5.5.12" />
-    <property name="SearchEverywhereHistoryKey" value="global&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;li&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/liveTableEdit.js&#10;calendr&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Form/CalendrierType.php&#10;appkern&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/AppKernel.php&#10;new&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Garde/new.html.twig&#10;index&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Calendrier/index.html.twig&#10;pompier&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Pompier.php&#10;garde&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Garde.php&#10;base&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/Resources/views/base.html.twig&#10;prox&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="glob&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;global&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;main&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/main.js&#10;builder&#9;null&#9;null&#10;base&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/Resources/views/base.html.twig&#10;li&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/liveTableEdit.js&#10;calendr&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Form/CalendrierType.php&#10;appkern&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/AppKernel.php&#10;new&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Garde/new.html.twig&#10;index&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Calendrier/index.html.twig&#10;pompier&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Pompier.php&#10;garde&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Garde.php&#10;prox&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -462,7 +405,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457361930621</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="zakdaozdk">
+      <created>1457362704887</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1457362704887</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -480,16 +429,16 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25520834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.49739584" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42219216" sideWeight="0.5097656" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.49739584" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16373478" sideWeight="0.5097656" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42219216" sideWeight="0.49023438" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16373478" sideWeight="0.49023438" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.49739584" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -532,6 +481,9 @@
           <caret line="273" column="5" selection-start-line="272" selection-start-column="55" selection-end-line="273" selection-end-column="5" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
+            <marker date="1457366352784" expanded="true" signature="1067:1240" placeholder="SELECT calen..calendrier..." />
+            <marker date="1457366352784" expanded="true" signature="3903:3982" placeholder="SELECT * FRO..calendrier..." />
+            <marker date="1457366352784" expanded="true" signature="8043:8095" placeholder="UPDATE calen..." />
           </folding>
         </state>
       </provider>
@@ -684,17 +636,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/liveTableEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppBundleBACK/Menu/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2109929">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Menu/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.769231">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state vertical-scroll-proportion="-2.0769231">
+          <caret line="29" column="114" selection-start-line="29" selection-start-column="114" selection-end-line="29" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.846154">
+          <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/CalendrierType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        <state vertical-scroll-proportion="-9.269231">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -702,15 +703,7 @@
     <entry file="file://$PROJECT_DIR$/web/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8623" column="0" selection-start-line="8623" selection-start-column="0" selection-end-line="8623" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/liveTableEdit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+          <caret line="8600" column="0" selection-start-line="8600" selection-start-column="0" selection-end-line="8614" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -723,29 +716,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="273" column="5" selection-start-line="272" selection-start-column="55" selection-end-line="273" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.51241136">
+          <caret line="157" column="37" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
+            <marker date="1457366352784" expanded="true" signature="1067:1240" placeholder="SELECT calen..calendrier..." />
+            <marker date="1457366352784" expanded="true" signature="3903:3982" placeholder="SELECT * FRO..calendrier..." />
+            <marker date="1457366352784" expanded="true" signature="8043:8095" placeholder="UPDATE calen..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42606518">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

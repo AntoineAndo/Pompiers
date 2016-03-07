@@ -1,7 +1,8 @@
-
 $( document ).ready(function() {
 
     var slug = window.location.href.split("/").pop();
+
+    console.log(slug);
 
     function getData(callback) {
         $.getJSON("ando-antoine/json", function (data) {
@@ -13,7 +14,18 @@ $( document ).ready(function() {
         results = JSON.parse(results);
         console.log(results);
         $('#calendar').fullCalendar({
-            events: results
+            events: results,
+            eventClick: function(event) {
+                var date = new Date(event.start);
+                date = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDay();
+
+                var obj = "{" +
+                    "'date'" + date +
+                    "''" +
+                    "" +
+                    "}"
+
+        }
         });
 
         $(".fc-event-container").click(function(e){
