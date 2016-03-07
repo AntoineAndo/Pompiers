@@ -1,19 +1,7 @@
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-entity_access:
-    resource: "@EntityAccessBundle/Controller/"
+app:
+    resource: "@AppBundle/Controller/"
     type:     annotation
     prefix:   /
-
-caserne_user:
-   resource: "@UserBundle/Controller/"
-   type:     annotation
-
-pompier:
-    resource: "@PompierBundle/Controller/"
-    type:     annotation
-
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
