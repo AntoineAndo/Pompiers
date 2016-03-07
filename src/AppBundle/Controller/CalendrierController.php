@@ -286,7 +286,7 @@ class CalendrierController extends Controller
 
 
             $result = array('data' => $truc);
-            return new JsonResponse($result);
+            return new JsonResponse($result);   
         }
 
 
