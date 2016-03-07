@@ -44,13 +44,21 @@
                      }
                  ];
                  results = JSON.parse(results);
+                 console.log(results.0);
                  $('#calendar').fullCalendar({
                      events: results
                  });
-            });
+                 $('.fc-event').not(".valide").append("<span>X</span>");
+
+                 $('span').click(function (e) {
+                     e.stopPropagation();
 
 
-            $(".valide").append("OK");
+                 });
+
+             });
+
+
 
         });
 

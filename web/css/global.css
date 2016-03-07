@@ -8599,7 +8599,8 @@ body {
 
 }
 
-.valide::after{
+span.valide::after{
+  z-index: 80;
   content: "✔";
   color: #00EC19;
   position: absolute;
@@ -8611,7 +8612,10 @@ body {
   border-radius: 10px;
   border: solid 1px black;
   background-color: white;
+}
 
+span.valide::after:hover{
+  border: solid 1px red;
 }
 
 #feedback { font-size: 1.4em; }
