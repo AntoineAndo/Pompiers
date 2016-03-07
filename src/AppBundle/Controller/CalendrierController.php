@@ -117,7 +117,7 @@ class CalendrierController extends Controller
 
     /**
      * @Method("GET")
-     * @Route("/{slug}/json", name="getJson")
+     * @Route("/{id}/json", name="getJson")
      */
     public function getJSONAction(Request $request)
     {
@@ -129,7 +129,7 @@ class CalendrierController extends Controller
             $events = array();
             $em = $this->getDoctrine()->getManager();
 
-            $entity = $em->getRepository("AppBundle:Pompier")->findOneBySlug(array_pop($slug));
+            $entity = $em->getRepository("AppBundle:Pompier")->find(array_pop($slug));
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find Calendrier entity.');

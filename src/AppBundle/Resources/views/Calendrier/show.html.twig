@@ -27,7 +27,7 @@
 
         $( document ).ready(function() {
             function getData(callback) {
-                $.getJSON("ando-antoine/json", function (data) {
+                $.getJSON({{ entity.id }}+"/json", function (data) {
                     callback(data);
                 });
             }
