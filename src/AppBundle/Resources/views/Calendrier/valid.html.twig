@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Demandes en attente</h1>
+
+    <ol>
+        {% for truc in calendrier %}
+
+            <li>{{ truc.nom }} {{ truc.prenom }} - {{ truc.date }} / {{ truc.horaire }}
+                <button class="bouton-valider" id="{{ truc.id }}">VALIDER</button>
+            </li>
+
+
+        {% endfor %}
+    </ol>
+
+
+
+{% endblock %}
