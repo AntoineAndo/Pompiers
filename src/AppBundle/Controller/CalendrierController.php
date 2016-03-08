@@ -72,7 +72,7 @@ class CalendrierController extends Controller
             $garde = $em->getRepository('AppBundle:Garde')->findOneByDate($date);
             $pompier = $em->getRepository('AppBundle:Pompier')->find($idPompier);
 
-            if(!$garde){
+            if(!$garde || ($garde->getHoraire() != $horaire)){
                 $garde = new Garde();
                 $garde->setDate($date);
                 $garde->setHoraire($horaire);

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb6958d6-775d-4d1c-8f40-968a45d40206" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/global.css" afterPath="$PROJECT_DIR$/web/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_project_name.iws" />
@@ -19,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\wamp\www\Pompiers" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -27,26 +25,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalendrierController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CalendrierController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2976191">
-              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.63809526">
+              <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
               <folding>
                 <element signature="e#40#67#0#PHP" expanded="true" />
-                <marker date="1457402201703" expanded="true" signature="1095:1268" placeholder="SELECT calen..calendrier..." />
-                <marker date="1457402201703" expanded="true" signature="6130:6267" placeholder="SELECT calen..." />
-                <marker date="1457402201703" expanded="true" signature="10952:11004" placeholder="UPDATE calen..." />
+                <marker date="1457418128103" expanded="true" signature="1095:1268" placeholder="SELECT calen..calendrier..." />
+                <marker date="1457418128103" expanded="true" signature="6168:6305" placeholder="SELECT calen..." />
+                <marker date="1457418128103" expanded="true" signature="10990:11042" placeholder="UPDATE calen..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Garde.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Garde.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.418182">
+              <caret line="100" column="43" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61904764">
-              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.1636364">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -108,18 +116,6 @@
             <state vertical-scroll-proportion="-5.647059">
               <caret line="8602" column="28" selection-start-line="8602" selection-start-column="28" selection-end-line="8602" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="25" column="85" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
-              <folding>
-                <element signature="e#7#47#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -225,8 +221,8 @@
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/web/css/global.css" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php" />
       </list>
     </option>
   </component>
@@ -248,8 +244,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1096" />
-    <option name="height" value="1896" />
+    <option name="width" value="1552" />
+    <option name="height" value="848" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -518,7 +514,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php5.5.12" />
-    <property name="SearchEverywhereHistoryKey" value="glob&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;index&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Calendrier/index.html.twig&#10;main&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/main.js&#10;calendr&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Controller/CalendrierController.php&#10;app.&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/app.php&#10;globa&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;base&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/Resources/views/base.html.twig&#10;composer&#9;FILE&#9;file://C:/wamp/www/Pompiers/composer.json&#10;pom&#9;null&#9;null&#10;appkern&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/AppKernel.php&#10;global&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;calendrier&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Controller/CalendrierController.php&#10;garde&#9;null&#9;null&#10;use&#9;null&#9;null&#10;builder&#9;null&#9;null&#10;li&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/liveTableEdit.js&#10;new&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Garde/new.html.twig&#10;pompier&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Pompier.php&#10;prox&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="garde&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Garde.php&#10;glob&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;index&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Calendrier/index.html.twig&#10;main&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/main.js&#10;calendr&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Controller/CalendrierController.php&#10;app.&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/app.php&#10;globa&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;base&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/Resources/views/base.html.twig&#10;composer&#9;FILE&#9;file://C:/wamp/www/Pompiers/composer.json&#10;pom&#9;null&#9;null&#10;appkern&#9;FILE&#9;file://C:/wamp/www/Pompiers/app/AppKernel.php&#10;global&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/css/global.css&#10;calendrier&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Controller/CalendrierController.php&#10;use&#9;null&#9;null&#10;builder&#9;null&#9;null&#10;li&#9;FILE&#9;file://C:/wamp/www/Pompiers/web/js/liveTableEdit.js&#10;new&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Resources/views/Garde/new.html.twig&#10;pompier&#9;FILE&#9;file://C:/wamp/www/Pompiers/src/AppBundle/Entity/Pompier.php&#10;prox&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -652,7 +648,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457396386625</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="topwin&#10;">
+      <created>1457403218446</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1457403218446</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -665,17 +667,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1096" height="1896" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23981482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1686198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.49739584" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.49739584" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15444879" sideWeight="0.19074073" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42219216" sideWeight="0.5026042" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15444879" sideWeight="0.80925924" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14255545" sideWeight="0.81145835" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42219216" sideWeight="0.49739584" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -713,7 +715,8 @@
     <MESSAGE value="Fixtures added" />
     <MESSAGE value="User's url to fetch json is no more hardcoded" />
     <MESSAGE value="delete events from calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete events from calendar" />
+    <MESSAGE value="topwin&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="topwin&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -726,9 +729,9 @@
           <caret line="273" column="5" selection-start-line="272" selection-start-column="55" selection-end-line="273" selection-end-column="5" />
           <folding>
             <element signature="e#40#67#0#PHP" expanded="true" />
-            <marker date="1457402201703" expanded="true" signature="1095:1268" placeholder="SELECT calen..calendrier..." />
-            <marker date="1457402201703" expanded="true" signature="6130:6267" placeholder="SELECT calen..." />
-            <marker date="1457402201703" expanded="true" signature="10952:11004" placeholder="UPDATE calen..." />
+            <marker date="1457418128103" expanded="true" signature="1095:1268" placeholder="SELECT calen..calendrier..." />
+            <marker date="1457418128103" expanded="true" signature="6168:6305" placeholder="SELECT calen..." />
+            <marker date="1457418128103" expanded="true" signature="10990:11042" placeholder="UPDATE calen..." />
           </folding>
         </state>
       </provider>
@@ -848,14 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.461538">
           <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Garde.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5384617">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1041,24 +1036,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2976191">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#67#0#PHP" expanded="true" />
-            <marker date="1457402201703" expanded="true" signature="1095:1268" placeholder="SELECT calen..calendrier..." />
-            <marker date="1457402201703" expanded="true" signature="6130:6267" placeholder="SELECT calen..." />
-            <marker date="1457402201703" expanded="true" signature="10952:11004" placeholder="UPDATE calen..." />
-          </folding>
+        <state vertical-scroll-proportion="-2.1636364">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Calendrier/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Garde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61904764">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.418182">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CalendrierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63809526">
+          <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="true" />
+            <marker date="1457418128103" expanded="true" signature="1095:1268" placeholder="SELECT calen..calendrier..." />
+            <marker date="1457418128103" expanded="true" signature="6168:6305" placeholder="SELECT calen..." />
+            <marker date="1457418128103" expanded="true" signature="10990:11042" placeholder="UPDATE calen..." />
+          </folding>
         </state>
       </provider>
     </entry>
