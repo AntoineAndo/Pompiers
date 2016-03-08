@@ -8630,6 +8630,19 @@ span.delete_button{
 #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
 #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
 
+#calendrier fieldset{
+  display:table;
+}
+
+#calendrier div{
+  display: table-row;
+}
+
+#calendrier div input,
+#calendrier div label,
+#calendrier div select{
+  display:table-cell;
+}
 
 
 

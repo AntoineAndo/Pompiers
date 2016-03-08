@@ -13,14 +13,48 @@
 
     <div id="calendar">
     </div>
-
-
-
+    <div id="calendrier">
+        <fieldset>
+            <div>
+                <label>Date: </label><input type="text" id="datepicker">
+            </div>
+            <div>
+                <label>Disponibilité: </label>
+                <select id="dispo" name="dispo">
+                    <option value="Garde">Garde</option>
+                    <option value="Astreinte">Astreinte</option>
+                    <option value="Urgence">Urgence</option>
+                    <option value="Indisponible">Indisponible</option>
+                </select>
+            </div>
+            <div>
+                <label>Créneau horaire: </label>
+                <select id="horaire" name="horaire">
+                    <option value="jour">Journée</option>
+                    <option value="nuit">Nuitée</option>
+                </select>
+            </div>
+        </fieldset>
+        <button id="submit_calendrier">Valider</button>
+    </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
     <script>
 
         var slug = window.location.href.split("/").pop();
 
         $( document ).ready(function() {
+
+            $(function() {
+                $( "#datepicker" ).datepicker();
+            });
+
             function getData(callback) {
                 $.getJSON({{ entity.id }}+"/json", function (data) {
                     callback(data);
@@ -44,41 +78,85 @@
                      events: results
                  });
 
-                 $('.fc-event').not(".valide").append("<span class='delete_button'>X</span>");
-                 $(".valide").append("<span class='valide'>✔</span>");
+
+                 delete_button();
+
+                 function delete_button(){
+
+                     $('.fc-event').not(".valide").append("<span class='delete_button'>X</span>");
+                     $(".valide").append("<span class='valide'>✔</span>");
+
+                     $("span.delete_button").bind("click", function () {
+                         parent = $(this).parent();
+                         id = parent.attr("class").split(/\s+/).pop().split("-").pop();
+
+                         swal({
+                             title: "Suppression d'un évenement",
+                             text: "Voulez vous vraiment supprimer cet évenement ?",
+                             type: "warning",
+                             showCancelButton: true,
+                             cancelButtonText: "Annuler",
+                             closeOnConfirm: false,
+                             confirmButtonText: "Confirmer la suppression",
+                             showLoaderOnConfirm: true,
+                         }, function(){
+
+                             $.ajax({
+                                 url: "/calendrier/delete",
+                                 method: "POST",
+                                 data: {id: id},
+                                 context: document.body
+                             }).done(function() {
+                                 $('#calendar').fullCalendar('removeEvents',id);
+                                 delete_button();
+                                 swal("Évenement supprimé avec succès!","","success");
+                             })
+                             .fail(function() {
+                                 swal("Une erreur survenue!","Veuillez réessayer dans quelques instants","error");
+                             });
+                         });
+                     });
+                 }
 
 
 
-                 $("span.delete_button").bind("click", function () {
-                     parent = $(this).parent();
-                     id = parent.attr("class").split(/\s+/).pop().split("-").pop();
 
-                     console.log(id);
 
-                     swal({
-                         title: "Suppression d'un évenement",
-                         text: "Voulez vous vraiment supprimer cet évenement ?",
-                         type: "warning",
-                         showCancelButton: true,
-                         cancelButtonText: "Annuler",
-                         closeOnConfirm: false,
-                         confirmButtonText: "Confirmer la suppression",
-                         showLoaderOnConfirm: true,
-                     }, function(){
 
+
+
+                 $("#submit_calendrier").bind("click", function () {
+
+
+                     idPompier = {{ entity.id }};
+                     date = $( "#datepicker").val();
+                     dispo = $("#dispo option:selected").val();
+                     console.log(dispo);
+                     horaire = $("#horaire option:selected").attr("value");
+
+                     if(!date || !dispo || !horaire){
+                         swal("Attention !","Cetains champs n'ont pas été rempli","error");
+                     }
+
+                     else{
                          $.ajax({
-                             url: "/calendrier/delete",
+                             url: "/calendrier/",
                              method: "POST",
-                             data: {id: id},
+                             data: {pompier: idPompier, date: date, dispo: dispo, horaire: horaire},
                              context: document.body
-                         }).done(function() {
-                             parent.css("display", "none");
-                             swal("Évenement supprimé avec succès!","","success");
+                         }).done(function(data) {
+                             data = JSON.parse(data);
+                             $('#calendar').fullCalendar( 'renderEvent', data );
+                             delete_button();
+                             swal("Évenement crée avec succès!","","success");
                          })
                          .fail(function() {
                              swal("Une erreur survenue!","Veuillez réessayer dans quelques instants","error");
                          });
-                     });
+                     }
+
+
+
                  });
 
 

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Garde;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -58,12 +59,84 @@ class CalendrierController extends Controller
      */
     public function createAction(Request $request)
     {
+
+        $em = $this->getDoctrine()->getManager();
+
+        if ($request->isXMLHttpRequest()) {
+            $idPompier = $request->request->get("pompier");
+            $horaire = $request->request->get("horaire");
+            $date = $request->request->get("date");
+            $date = date_create_from_format('m/j/Y', $date);
+            $dispo = $request->request->get("dispo");
+
+            $garde = $em->getRepository('AppBundle:Garde')->findOneByDate($date);
+            $pompier = $em->getRepository('AppBundle:Pompier')->find($idPompier);
+
+            if(!$garde){
+                $garde = new Garde();
+                $garde->setDate($date);
+                $garde->setHoraire($horaire);
+                $em->persist($garde);
+                $em->flush();
+            }
+
+            $calendrier = new Calendrier();
+            $calendrier->setIdGarde($garde);
+            $calendrier->setIdPompier($pompier);
+            $calendrier->setDispo($dispo);
+            $em->persist($calendrier);
+            $em->flush();
+
+            $response = array(
+                "title" => $dispo . " - " . $horaire,
+            );
+
+
+            $date = $date->format('Y-m-d');
+
+            $response['id'] = $calendrier->getId();
+            //$response['url'] = "http://www.google.fr";
+
+            if($horaire == 'nuit') {
+                $start = "19:00";
+                $end = "20:00";
+                $creneau = "Nuit";
+            }
+            else {
+                $start = "07:00";
+                $end = "19:00";
+                $creneau = "Jour";
+            }
+
+            $response["title"] = $dispo . " - " . $creneau;
+
+            $response["start"] = $date . " " . $start;
+            $response["end"] = $date . " " . $end;
+
+            $response["className"] = array("id-".$calendrier->getId());
+
+            if($dispo == "Garde")
+                $response["backgroundColor"] = "green";
+            elseif ($dispo == "Astreinte")
+                $response["backgroundColor"] = "orange";
+            elseif ($dispo == "Urgence")
+                $response["backgroundColor"] = "red";
+            else
+                $response["backgroundColor"] = "#303030";
+
+
+            $response = json_encode($response, JSON_PRETTY_PRINT);
+
+            return new JsonResponse($response);
+
+        }
+
+
         $entity = new Calendrier();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
 
