@@ -67,7 +67,7 @@ class CalendrierController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('calendrier_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('calendrier'));
         }
 
         /*  return array(
@@ -158,7 +158,7 @@ class CalendrierController extends Controller
                 $jsonEvent = array();
 
                 $jsonEvent['id'] = $jour['idCalendrier'];
-                $jsonEvent['url'] = "http://www.google.fr";
+                //$jsonEvent['url'] = "http://www.google.fr";
 
                 if($jour["horaire"] == 'nuit') {
                     $start = "19:00";
@@ -175,8 +175,10 @@ class CalendrierController extends Controller
 
                 $jsonEvent["start"] = $jour['date'] . " " . $start;
                 $jsonEvent["end"] = $jour['date'] . " " . $end;
+
+                $jsonEvent["className"] = array("id-".$jour['idCalendrier']);
                 if($jour['valide'] == 1)
-                    $jsonEvent["className"] = "valide";
+                    array_push($jsonEvent["className"],"valide");
 
                 if($jour['dispo'] == "Garde")
                     $jsonEvent["backgroundColor"] = "green";
@@ -354,6 +356,34 @@ class CalendrierController extends Controller
 
         return $this->redirect($this->generateUrl('calendrier'));
     }
+
+
+    /**
+     * Deletes a Calendrier entity.
+     *
+     * @Route("/delete", name="calendrier_delete_post")
+     * @Method("POST")
+     */
+    public function deletePostAction(Request $request)
+    {
+
+        if ($request->isXMLHttpRequest()) {
+            $id = $request->request->get("id");
+
+            $em = $this->getDoctrine()->getManager();
+            $entity = $em->getRepository('AppBundle:Calendrier')->find($id);
+
+            if (!$entity) {
+                throw $this->createNotFoundException('Unable to find Calendrier entity.');
+            }
+
+            $em->remove($entity);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('calendrier'));
+        }
+    }
+
 
     /**
      * Creates a form to delete a Calendrier entity by id.

@@ -1,3 +1,5 @@
+/*
+
 $( document ).ready(function() {
 
     var slug = window.location.href.split("/").pop();
@@ -6,6 +8,7 @@ $( document ).ready(function() {
 
     function getData(callback) {
         $.getJSON("ando-antoine/json", function (data) {
+            console.log(data);
             callback(data);
         });
     }
@@ -18,13 +21,6 @@ $( document ).ready(function() {
             eventClick: function(event) {
                 var date = new Date(event.start);
                 date = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDay();
-
-                var obj = "{" +
-                    "'date'" + date +
-                    "''" +
-                    "" +
-                    "}"
-
         }
         });
 
@@ -34,3 +30,4 @@ $( document ).ready(function() {
     });
 
 });
+*/

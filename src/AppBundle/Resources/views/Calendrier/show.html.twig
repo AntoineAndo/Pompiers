@@ -3,23 +3,18 @@
 {% block body -%}
     <h1>Calendrier</h1>
 
-    <div id="calendar">
-    </div>
-
-
     <ul class="record_actions">
         <li>
             <a href="{{ path('calendrier') }}">
                 Back to the list
             </a>
         </li>
-        <li>
-            <a href="{{ path('calendrier_edit', { 'id': entity.id }) }}">
-                Edit
-            </a>
-        </li>
-        <li>{{ form(delete_form) }}</li>
     </ul>
+
+    <div id="calendar">
+    </div>
+
+
 
     <script>
 
@@ -48,13 +43,45 @@
                  $('#calendar').fullCalendar({
                      events: results
                  });
-                 $('.fc-event').not(".valide").append("<span>X</span>");
 
-                 $('span').click(function (e) {
-                     e.stopPropagation();
+                 $('.fc-event').not(".valide").append("<span class='delete_button'>X</span>");
+                 $(".valide").append("<span class='valide'>✔</span>");
 
 
+
+                 $("span.delete_button").bind("click", function () {
+                     parent = $(this).parent();
+                     id = parent.attr("class").split(/\s+/).pop().split("-").pop();
+
+                     console.log(id);
+
+                     swal({
+                         title: "Suppression d'un évenement",
+                         text: "Voulez vous vraiment supprimer cet évenement ?",
+                         type: "warning",
+                         showCancelButton: true,
+                         cancelButtonText: "Annuler",
+                         closeOnConfirm: false,
+                         confirmButtonText: "Confirmer la suppression",
+                         showLoaderOnConfirm: true,
+                     }, function(){
+
+                         $.ajax({
+                             url: "/calendrier/delete",
+                             method: "POST",
+                             data: {id: id},
+                             context: document.body
+                         }).done(function() {
+                             parent.css("display", "none");
+                             swal("Évenement supprimé avec succès!","","success");
+                         })
+                         .fail(function() {
+                             swal("Une erreur survenue!","Veuillez réessayer dans quelques instants","error");
+                         });
+                     });
                  });
+
+
 
              });
 

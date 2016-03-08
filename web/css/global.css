@@ -8599,9 +8599,10 @@ body {
 
 }
 
-span.valide::after{
+.fc-event span.valide,
+.fc-event span.delete_button
+{
   z-index: 80;
-  content: "✔";
   color: #00EC19;
   position: absolute;
   right: 0;
@@ -8614,8 +8615,13 @@ span.valide::after{
   background-color: white;
 }
 
-span.valide::after:hover{
-  border: solid 1px red;
+span.delete_button{
+  color: red !important;
+}
+
+.delete_button:hover{
+  cursor: pointer;
+  color: red;
 }
 
 #feedback { font-size: 1.4em; }
