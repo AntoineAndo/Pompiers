@@ -17,11 +17,10 @@ class Builder extends ContainerAware
     {
         $em = $this->container->get('doctrine.orm.entity_manager');
         $meta = $em->getMetadataFactory()->getAllMetadata();
-        dump($meta);
 
         $menu = $factory->createItem('root');
         $menu->setChildrenAttributes(array('class' => 'nav navbar-nav'));
-        $menu->addChild('Home', ['route' => 'homepage']);
+        $menu->addChild('Accueil', ['route' => 'homepage']);
 
         foreach ($meta as $subMenu) {
 
@@ -39,6 +38,8 @@ class Builder extends ContainerAware
             }
 
         }
+
+        $menu->addChild('Validations', ['route' => 'calendrier_valid']);
 
         return $menu;
     }

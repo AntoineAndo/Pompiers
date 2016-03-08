@@ -8645,6 +8645,24 @@ span.delete_button{
 }
 
 
+.main{
+  width: 60%;
+  margin: auto;
+  background-color: #eeeeee;
+  padding: 25px 50px;
+  border-radius: 5px;
+}
+
+#calendrier{
+  display: inline-block;
+  background-color: #eeeeee;
+  padding: 25px;
+  border-radius: 5px;
+  margin: 20px 100px;
+
+}
+
+
 
 
 

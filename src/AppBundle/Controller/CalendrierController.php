@@ -21,7 +21,6 @@ use Symfony\Component\HttpFoundation\Session\Session;
  */
 class CalendrierController extends Controller
 {
-
     /**
      * Lists all Calendrier entities.
      *
@@ -36,7 +35,25 @@ class CalendrierController extends Controller
 
         $entities = $em->getRepository('AppBundle:Pompier')->findAll();
 
-        $statement = $connection->prepare("SELECT calendrier.id, pompier.nom, pompier.prenom, garde.date FROM calendrier JOIN garde ON idGarde = garde.id JOIN pompier ON idPompier = pompier.id  WHERE valide = :valide");
+
+        return array(
+            'entities' => $entities,
+        );
+    }
+
+    /**
+     * Lists all Calendrier entities.
+     *
+     * @Route("/valid", name="calendrier_valid")
+     * @Method("GET")
+     * @Template("AppBundle:Calendrier:valid.html.twig")
+     */
+    public function validAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $connection = $em->getConnection();
+
+        $statement = $connection->prepare("SELECT calendrier.id, pompier.nom, pompier.prenom, garde.date, garde.horaire FROM calendrier JOIN garde ON idGarde = garde.id JOIN pompier ON idPompier = pompier.id  WHERE valide = :valide");
         $statement->bindValue('valide', 0);
         $statement->execute();
         $calendrier = $statement->fetchAll();
@@ -45,10 +62,11 @@ class CalendrierController extends Controller
 
 
         return array(
-            'entities' => $entities,
             'calendrier' => $calendrier
         );
     }
+
+
 
     /**
      * Creates a new Calendrier entity.

@@ -30,50 +30,38 @@
 
     </script>
     <h1>Calendrier list</h1>
-
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Pompier</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('calendrier_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.nom }} {{ entity.prenom }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('calendrier_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-        <ul>
+    <div class="main">
+        <table class="records_list">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Pompier</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('calendrier_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.nom }} {{ entity.prenom }}</td>
+                    <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('calendrier_show', { 'id': entity.id }) }}">show</a>
+                        </li>
+                    </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <ul>
         <li>
             <a href="{{ path('calendrier_new') }}">
                 Create a new entry
             </a>
         </li>
     </ul>
-
-
-    <ol>
-        {% for truc in calendrier %}
-
-            <li>{{ truc.nom }} {{ truc.prenom }} - {{ truc.date }}
-                <button class="bouton-valider" id="{{ truc.id }}">VALIDER</button>
-            </li>
-
-
-        {% endfor %}
-    </ol>
 
 
 
